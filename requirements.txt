@@ -1,0 +1,12 @@
+aiohttp>=3.9
+aiofiles>=23.2
+python-dotenv>=1.0
+PyYAML>=6.0
+beautifulsoup4>=4.12
+lxml>=5.2
+tqdm>=4.66
+openai>=1.23
+groqcloud
+tenacity>=8.3
+pandas>=2.2
+yfinance>=0.2

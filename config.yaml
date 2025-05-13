@@ -1,0 +1,25 @@
+tickers: ["AAPL", "MSFT"]
+forms: ["10-K", "8-K"]
+
+ingest:
+  max_concurrent_requests: 8 #aiohttp parallelism
+  lookback_years: 2
+  save_dir: "data/raw"
+
+preprocess:
+  output_file: "data/clean/filings.jsonl"
+
+llm:
+  provider: "openai" #openai or groq
+  model: "llama-3.3-70b"
+  batch_size: 4
+  sentiment_thresholds:
+    positive: 0.20
+    negative: -0.20
+  output_file: "data/inference/sentiment.jsonl"
+
+backtest:
+  start_date: "2022-01-01"
+  end_date:   "2024-12-31"
+  holding_period_days: 5
+  initial_cash: 1_000_000
