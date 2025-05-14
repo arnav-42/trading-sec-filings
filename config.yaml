@@ -1,25 +1,26 @@
-tickers: ["AAPL", "MSFT"]
-forms: ["10-K", "8-K"]
+# SEC EDGAR Fetcher Configuration
 
-ingest:
-  max_concurrent_requests: 8 #aiohttp parallelism
-  lookback_years: 2
-  save_dir: "data/raw"
+# Required: Your contact information for SEC (they require this)
+user_agent: "akalekar@purdue.edu"
 
-preprocess:
-  output_file: "data/clean/filings.jsonl"
+# How often to check for new filings (in seconds)
+# Note: While set to 0.2 seconds, actual request timing will be rate-limited
+# to comply with SEC's limits (10 requests/second)
+check_interval_seconds: 0.2
 
-llm:
-  provider: "openai" #openai or groq
-  model: "llama-3.3-70b"
-  batch_size: 4
-  sentiment_thresholds:
-    positive: 0.20
-    negative: -0.20
-  output_file: "data/inference/sentiment.jsonl"
+# NOTE: The system monitors all recent filings from the SEC EDGAR RSS feeds,
+# not just specific companies. The feeds are checked for new 10-K, 10-Q, 8-K,
+# and 6-K filings across all publicly traded companies.
+#
+# The specific company list below is maintained for reference but not used by the
+# main fetcher. It is only used by fetch_test.py for targeted testing.
 
-backtest:
-  start_date: "2022-01-01"
-  end_date:   "2024-12-31"
-  holding_period_days: 5
-  initial_cash: 1_000_000
+# List of companies for testing purposes only
+companies:
+  - name: "Apple Inc."
+    cik: "0000320193"
+  - name: "Microsoft Corporation"
+    cik: "0000789019"
+  - name: "Alphabet Inc."
+    cik: "0001652044"
+  # Add more companies as needed 

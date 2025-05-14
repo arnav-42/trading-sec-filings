@@ -1,0 +1,23 @@
+{
+  "company": "Apple Inc.",
+  "filing_type": "10-K",
+  "signal": "HOLD",
+  "confidence": 0.6,
+  "reasoning": "Neutral sentiment and no guidance change",
+  "timestamp": 1747194225.0860066,
+  "analysis": {
+    "sentiment": "neutral",
+    "guidance_change": "none",
+    "forward_looking_sentiment": 0.5,
+    "risk_factor_level": 0.2,
+    "mna_intent": "none",
+    "executive_tone": "neutral",
+    "uncertainty_level": 0.3,
+    "company": "Apple Inc.",
+    "filing_type": "10-K",
+    "file_name": "Apple Inc._320193_10-K_20241101.txt",
+    "timestamp": 1747193922.9667072
+  },
+  "source": "agentic_trader",
+  "model": "meta-llama/llama-3.3-70b-instruct:free"
+}

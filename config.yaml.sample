@@ -1,0 +1,21 @@
+# SEC EDGAR Fetcher Configuration
+
+# Required: Your contact information for SEC (they require this)
+# Replace with your information
+user_agent: "Your Name contact@email.com"
+
+# How often to check for new filings (in seconds)
+# Note: While set to 0.2 seconds, actual request timing will be rate-limited
+# to comply with SEC's limits (10 requests/second)
+check_interval_seconds: 0.2
+
+# List of companies to monitor
+# Add or remove companies as needed
+# Find CIK numbers at: https://www.sec.gov/edgar/searchedgar/companysearch
+companies:
+  - name: "Apple Inc."
+    cik: "0000320193"
+  - name: "Microsoft Corporation"
+    cik: "0000789019"
+  - name: "Alphabet Inc."
+    cik: "0001652044" 

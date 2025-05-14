@@ -1,0 +1,23 @@
+{
+  "company": "Apple Inc.",
+  "filing_type": "10-K",
+  "signal": "HOLD",
+  "timestamp": 1747192507.8556361,
+  "analysis": {
+    "sentiment": "neutral",
+    "error": "JSON parsing failed",
+    "company": "Apple Inc.",
+    "filing_type": "10-K",
+    "file_name": "Apple Inc._320193_10-K_20241101.txt",
+    "timestamp": 1747192488.8374474
+  },
+  "metrics_used": {
+    "guidance_change": null,
+    "forward_looking_sentiment": null,
+    "risk_factor_level": null,
+    "executive_tone": null,
+    "uncertainty_level": null
+  },
+  "source": "rule_based_algo",
+  "explanation": "Mixed signals or neutral outlook."
+}
