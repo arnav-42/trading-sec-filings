@@ -14,21 +14,17 @@ This system (still a WIP) monitors the SEC EDGAR RSS feeds for new filings from 
 1. Clone this repository to your computer
 2. Copy `config.yaml.sample` to `config.yaml` and add your contact email (SEC requires this)
 3. Create a `.env` file with your OpenRouter API key:
+   
    ```
    OPENROUTER_API_KEY=your_key_here
    ```
-4. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
-5. Run the full pipeline with a single command:
-   ```bash
-   python main.py
-   ```
+5. Install the required packages: `pip install -r requirements.txt`
+   
+6. Run the full pipeline with a single command: `python main.py`
 
 ### OpenRouter Setup
 
-You'll need an OpenRouter API key to use the sentiment analysis and agentic trading features:
+You'll need an OpenRouter API key to use the sentiment analysis and agentic trading.
 
 1. Create a free account at [OpenRouter](https://openrouter.ai)
 2. Navigate to the [API Keys section](https://openrouter.ai/keys)
@@ -55,8 +51,6 @@ python main.py --continuous --interval 120
 ```
 
 ### Cherry-Pick Components
-
-Only interested in specific parts? No problem:
 
 ```bash
 # Just fetch new SEC filings
